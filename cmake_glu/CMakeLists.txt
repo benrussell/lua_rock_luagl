@@ -3,6 +3,19 @@ project(lua_rock_luaglu)
 
 set(CMAKE_CXX_STANDARD 20)
 
+
+
+
+set( LNK_LIN third_party/libs/linux )
+LINK_DIRECTORIES( ${LNK_LIN} )
+
+link_libraries(
+        luajit
+)
+
+
+
+
 include_directories( ../third_party/LuaJIT-2.1/src )
 
 set( LUAGLU_SRC
